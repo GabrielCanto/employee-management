@@ -1,4 +1,144 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Employee Management System
+
+A Laravel-based application for managing employee data and information with a modern admin panel built using Filament.
+
+## 📋 Features
+
+- **Employee Management**: Create, view, edit, and delete employee records
+- **User Management**: Integrated with Laravel's authentication system
+- **Role-based Access Control**: Using Spatie Permissions and Filament Shield
+- **Dashboard Widgets**: Visual data representation with charts and statistics
+- **Category-based Organization**: Group employees by department or category
+- **User Profiles**: Custom profile management for users
+
+## 🚀 Tech Stack
+
+- **Laravel 12**: Modern PHP framework
+- **Filament 3**: Admin panel and form builder
+- **MySQL**: Database management
+- **Tailwind CSS**: Styling and UI components
+- **Alpine.js**: JavaScript framework for interactivity
+- **Livewire**: Dynamic UI interactions without writing JavaScript
+- **Spatie Permissions**: Role and permission management
+
+## 📦 Requirements
+
+- PHP 8.2+
+- Composer
+- MySQL or compatible database
+- Node.js and NPM
+
+## ⚙️ Installation
+
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/GabrielCanto/employee-management.git
+   cd employee-management
+   ```
+
+2. Install PHP dependencies:
+   ```bash
+   composer install
+   ```
+
+3. Install JavaScript dependencies:
+   ```bash
+   npm install
+   ```
+
+4. Create and configure environment file:
+   ```bash
+   cp .env.example .env
+   php artisan key:generate
+   ```
+
+5. Configure your database in the `.env` file:
+   ```
+   DB_CONNECTION=mysql
+   DB_HOST=127.0.0.1
+   DB_PORT=3306
+   DB_DATABASE=employee_management
+   DB_USERNAME=root
+   DB_PASSWORD=
+   ```
+
+6. Run migrations and seed the database:
+   ```bash
+   php artisan migrate
+   php artisan db:seed
+   ```
+
+7. Build front-end assets:
+   ```bash
+   npm run build
+   ```
+
+## 🏃‍♂️ Running the Application
+
+### Development
+
+```bash
+# Run server and vite together with concurrent processes
+composer dev
+
+# Or run them separately
+php artisan serve
+npm run dev
+```
+
+### Production
+
+```bash
+npm run build
+php artisan serve --port=8000
+```
+
+Visit `http://localhost:8000` in your browser.
+
+## 🔐 Default Login
+
+After seeding the database, you can log in with:
+- Email: `admin@example.com`
+- Password: `password`
+
+## 📊 Dashboard and Charts
+
+The application includes a dashboard with several widgets:
+- Employee count by category
+- Recent employee additions
+- User statistics
+
+## 🧩 Project Structure
+
+- `app/Filament/Resources` - Filament admin panel resources
+- `app/Filament/Widgets` - Dashboard widgets and charts
+- `app/Models` - Eloquent models
+- `database/migrations` - Database migrations
+- `database/seeders` - Database seeders
+
+## 🛠️ Customization
+
+### Adding New Employee Categories
+
+Edit the `$categories` array in the `EmployeeSeeder.php` file to add new categories.
+
+### Modifying Charts
+
+Charts can be customized in `app/Filament/Widgets/EmployeesChart.php`.
+
+## 📝 License
+
+This project is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## 👥 Contributors
+
+- Your Name
+
+## 🙏 Acknowledgements
+
+- [Laravel](https://laravel.com)
+- [Filament](https://filamentphp.com)
+- [Spatie](https://spatie.be)<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
 <a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
